@@ -198,6 +198,7 @@ async function startImportViaWebtrigger() {
     await startImportViaWebtrigger();
 
     const containerToken = await getContainerToken();
+    await new Promise(resolve => setTimeout(resolve, 3000)); // wait 3 second
     const links = await getImportLinks(containerToken);
     
     const success = await pollStatus(containerToken, links.getStatus);
