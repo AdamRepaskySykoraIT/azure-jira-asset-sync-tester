@@ -23,4 +23,5 @@ jobs:
       - name: Run sync test
         env:
           JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+          WEBTRIGGER_URL: ${{ secrets.WEBTRIGGER_URL }}
         run: npm start
