@@ -1,0 +1,12 @@
+{
+  "name": "azure-jira-asset-sync-tester",
+  "version": "1.0.0",
+  "description": "Scheduled test runner for verifying Azure-to-Jira asset sync functionality via Forge Webtrigger.",
+  "main": "automation-tests.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node automation-tests.js"
+  },
+  "author": "SykoraIT",
+  "license": "MIT"
+}
