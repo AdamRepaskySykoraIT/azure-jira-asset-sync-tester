@@ -1,1 +1,1 @@
-# azure-jira-asset-sync
+# azure-jira-asset-sync-tester
