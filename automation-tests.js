@@ -8,7 +8,10 @@ const WEBTRIGGER_URL = config.WEBTRIGGER_URL;
 
 if (!JIRA_USER || !JIRA_API_TOKEN || !WORKSPACE_ID || !IMPORT_SOURCE_ID) {
   console.error('❌ Configuration variables are not set properly:');
-  console.log(JIRA_USER, JIRA_API_TOKEN, WORKSPACE_ID, IMPORT_SOURCE_ID);
+  if (!JIRA_USER) console.error('JIRA_USER is missing');
+  if (!JIRA_API_TOKEN) console.error('JIRA_API_TOKEN is missing');
+  if (!WORKSPACE_ID) console.error('WORKSPACE_ID is missing');
+  if (!IMPORT_SOURCE_ID) console.error('IMPORT_SOURCE_ID is missing');
   process.exit(1);
 }
 console.log('Using JIRA_USER:', JIRA_USER, 'WORKSPACE_ID:', WORKSPACE_ID, 'IMPORT_SOURCE_ID:', IMPORT_SOURCE_ID);
