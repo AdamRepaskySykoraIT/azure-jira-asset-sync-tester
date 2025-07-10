@@ -32,5 +32,5 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_FORTIFIED }}
         run: |
           curl -X POST -H 'Content-type: application/json' \
-            --data '{"text":"❌ *Asset Sync Test FAILED! (this is just a forced testing-failure)* Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' \
+            --data '{"text":"❌ *Asset Sync Test FAILED!* Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' \
             "$SLACK_WEBHOOK_URL"
