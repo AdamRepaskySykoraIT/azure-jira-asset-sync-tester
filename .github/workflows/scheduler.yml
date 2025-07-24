@@ -29,7 +29,7 @@ jobs:
       - name: Notify Slack on failure
         if: failure()
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_FORTIFIED }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_ADAM }}
         run: |
           curl -X POST -H 'Content-type: application/json' \
             --data '{"text":"❌ *Asset Sync Test FAILED!* Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' \
